@@ -10,7 +10,8 @@ const Home = () => {
     const [totalPages, setTotalPages] = useState(1);
 
     useEffect(() => {
-      fetch('https://mernappbackend-production-e9cc.up.railway.app/api/workout?page=${page}&limit=6').then(response => response.json())
+        fetch(`https://mernappbackend-production-e9cc.up.railway.app/api/workout?page=${page}&limit=6`)
+            .then(response => response.json())
             .then(data => {
                 dispatch({ type: 'SET_WORKOUTS', payload: data.workouts });
                 setTotalPages(data.totalPages); // Set total pages for pagination
