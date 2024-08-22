@@ -14,7 +14,7 @@ const WorkoutForm = () => {
     
         const workout = {title, load, reps}
         
-        const response = await fetch('http://localhost:3001/api/workout', {
+        const response = await fetch('https://mernappbackend-production-e9cc.up.railway.app/api/workout', {
           method: 'POST',
           body: JSON.stringify(workout),
           headers: {

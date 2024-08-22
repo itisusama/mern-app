@@ -7,7 +7,7 @@ import WorkoutForm from '../components/WorkoutForm'
 const Home = () => {
   const { workout, dispatch } = useWorkoutContext()
     useEffect(()=>{
-        fetch('http://localhost:3001/api/workout').then(response => response.json())
+        fetch('https://mernappbackend-production-e9cc.up.railway.app/api/workout').then(response => response.json())
         .then(data => dispatch({type: 'SET_WORKOUTS', payload: data}))
         .catch(error => console.error(error))
     }, [])
