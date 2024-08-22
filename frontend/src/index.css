@@ -99,7 +99,7 @@ div.error {
 @media screen and (max-width: 768px){
   .home{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 2rem;
   }
 }
